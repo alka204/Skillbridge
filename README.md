@@ -44,12 +44,12 @@ Skills are not isolated pieces of information.
 For example:
 
 - text
-Alka
+  Alka
   │
   ├── HAS_SKILL ──→ React
-  │                    │
-  │                    └── RELATED_TO ──→ Next.js
+  │ │
+  │ └── RELATED_TO ──→ Next.js
   │
   └── WANTS_TO_LEARN ──→ AWS
-                           │
-                           └── RELATED_TO ──→ Docker
+  │
+  └── RELATED_TO ──→ Docker
