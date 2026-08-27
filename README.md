@@ -1,16 +1,55 @@
-# React + Vite
+# SkillBridge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A graph-powered skill discovery and mentorship platform built with React, Express.js, and CognoDB.
 
-Currently, two official plugins are available:
+SkillBridge helps users discover people, skills, mentors, companies, and structured learning paths by exploring the relationships between them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Instead of treating skills and people as isolated records, SkillBridge models them as an interconnected graph. This makes it possible to discover relationships such as:
 
-## React Compiler
+- People who have a particular skill
+- Skills related to another skill
+- People who want to learn a skill
+- Mentors whose skills match another person's learning goals
+- Learning paths connected to multiple skills
+- Multi-hop relationships across people and skills
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+Frontend :https://skillbridge-three-phi.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Backend :https://skillbridge-6j2p.onrender.com/api/health
+
+## 📌 Project Overview
+
+SkillBridge is a skill discovery platform designed around a graph data model.
+
+The platform contains:
+
+- 👥 People
+- 🧠 Skills
+- 🏢 Companies
+- 📚 Learning Paths
+- 🎯 Learning Goals
+- 🤝 Mentor Relationships
+- 🔗 Skill Relationships
+
+The application uses CognoDB as the graph database and Express.js as the backend API layer.
+
+The React frontend consumes the backend APIs and presents the graph data through a simple, user-friendly interface.
+
+## 💡 Why a Graph Database?
+
+Skills are not isolated pieces of information.
+
+For example:
+
+- text
+Alka
+  │
+  ├── HAS_SKILL ──→ React
+  │                    │
+  │                    └── RELATED_TO ──→ Next.js
+  │
+  └── WANTS_TO_LEARN ──→ AWS
+                           │
+                           └── RELATED_TO ──→ Docker
