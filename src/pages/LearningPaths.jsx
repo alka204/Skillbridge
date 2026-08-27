@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import { getLearningPaths } from "../services/api";
 
 function LearningPaths() {
